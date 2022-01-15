@@ -21,6 +21,11 @@ li{
 a{
     text-decoration:none;
 }
+.flex-items{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 /* header section */
 header{
     width:100%;
@@ -91,17 +96,69 @@ main{
     border:none;
     background:#E02C6D;
     color:white;
-    padding:10px 20px;
+    padding:10px 40px 10px 20px;
     border-radius: 20px;
     font-family:'Poppins';
     font-weight:500;
+    position:relative;
     cursor:pointer;
 }
 .details button .fas{
-    padding-left:10px;
+    position:absolute;
+    right:15px;
+}
+.details button:hover .fas{
+    animation:btn-animation 1s ease-in-out infinite;
+}
+@keyframes btn-animation{
+    0%{
+        right:15px;
+        opacity: 1;
+        transform: rotate(0deg);
+    }
+    49%{
+        right:-10px;
+        opacity: 0;
+        transform: rotate(0deg);
+    }
+    50%{
+        right:-10px;
+        opacity: 0;
+        transform: rotate(180deg);
+    }
+    99.9%{
+        right: 15px;
+        transform: rotate(180deg);
+        opacity: 1;
+    }
+    100%{
+        right: 15px;
+        transform: rotate(0deg);
+        opacity: 1;
+    }
+}
+.hero-section .img{
+    position: relative;
+    top:0;
+    left: 0;
 }
 .hero-section img{
+    position:absolute;
+    top:0;
+    left: 0;
     width:600px;
+    animation:hero-img-an 2s linear infinite;
+}
+@keyframes hero-img-an{
+    0%{
+        top:10px;
+    }
+    50%{
+        top:0px;
+    }
+    100%{
+        top:10px;
+    }
 }
 
 /* brand-section */
@@ -118,13 +175,16 @@ main{
     border-top:2px solid #dfdfdf;
     border-bottom:2px solid #dfdfdf;
 }
+.brands img{
+    cursor:pointer;
+}
 
 /* card-section */
 
 .card-section{
     display:grid;
     grid-template-columns:repeat(3,330px);
-    grid-gap:20px;
+    grid-gap:30px;
     justify-content:center;
 }
 
@@ -142,6 +202,12 @@ main{
     background:#fff;
     border-radius:10px;
     box-shadow:4px 4px 20px 10px rgba(0,0,0,.1);
+    transition:all.3s ease-in-out;
+}
+.card:hover{
+    box-shadow:4px 4px 20px 15px rgba(0,0,0,.2);
+    transform:scale(1.05);
+
 }
 .card img{
     width:100%;
@@ -170,5 +236,50 @@ main{
     font-size:12px;
 }
 .see-more-btn{
-    text-align: right;
+    padding:20px;
+    display: flex;
+    justify-content: flex-end;
+}
+.see-more-btn a{
+    color:#E02C6D;
+    font-size:16px;
+    font-weight: bold;
+}
+.see-more-btn i{
+    padding-left: 5px;
+}
+/* footer-section */
+
+.footer{
+    height:200px;
+    background:#0A0826;
+    width:100%;
+    flex-direction:column;
+    padding:10px 0;
+    color:#fff;
+}
+.footer h2{
+    font-family: 'Poppins';
+    font-weight: 400;
+}
+.footer p{
+    padding:10px 0;
+    text-align: center;
+    font-family: 'Poppins';
+    font-size:14px;
+    line-height: 20px;
+}
+.social-media a{
+    background:rgba(170, 170, 170, 0.26);
+    border-radius:50%;
+    margin:5px;
+}
+.social-media i{
+    color:#fff;
+    padding:10px;
+    font-size:18px;
+}
+
+@media (max-width:720px){
+    
 }
