@@ -248,15 +248,18 @@ main{
     padding-left:10px;
     font-size:12px;
 }
+.see-more{
+    justify-content: center;
+}
 .see-more-btn{
+    width:1060px;
     padding:20px;
     display: flex;
     justify-content: flex-end;
-    margin-right: 150px;
 }
 .see-more-btn a{
     color:#E02C6D;
-    font-size:16px;
+    font-size:18px;
     font-weight: bold;
 }
 .see-more-btn i{
@@ -390,9 +393,7 @@ main{
     .hero-section img{
         width:400px;
     }
-    .see-more-btn{
-        margin-right: 50px;
-    }
+    
     /* card-section */
     .card-section{
         grid-template-columns: repeat(2,330px);
@@ -402,6 +403,9 @@ main{
     }
     .newsletter-info{
         padding-right:50px;
+    }
+    .newsletter-info h2{
+        font-size:30px;
     }
 }
 @media (max-width:720px){
