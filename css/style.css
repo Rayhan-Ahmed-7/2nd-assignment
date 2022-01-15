@@ -1,6 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Nosifer&family=Poppins:wght@300;400;500&display=swap');
 
 /* global style */
+:root{
+    --font-color:#3a3a3a;
+}
 *{
     margin:0;
     padding:0;
@@ -34,7 +37,7 @@ header{
 }
 .logo h2{
     font-family:'Nosifer';
-    background:linear-gradient(to right, rgb(255, 197, 38) , rgb(255, 31, 61));
+    background:linear-gradient(to left, rgb(255, 38, 146) , rgb(255, 31, 61));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 
@@ -48,9 +51,13 @@ header{
 .nav li a{
     font-family:'Poppins',sans-serif;
     padding:10px 0;
-    color:#333;
+    color:var(--font-color);
 }
 
+.flexible{
+    display:flex;
+    align-items: center;
+}
 
 /* main-section */
 
@@ -62,4 +69,106 @@ main{
 
 .container{
     width:90%;
+}
+.hero-section{
+    margin-bottom: 50px;
+}
+.hero-section .details{
+    padding-right: 80px;
+}
+.details h2{
+    font-size:50px;
+    color:var(--font-color);
+    font-family:'Poppins';
+}
+.details p{
+    margin:20px 0;
+    font-family: 'Poppins';
+    color:var(--font-color);
+    font-weight: 500;
+}
+.details button{
+    border:none;
+    background:#E02C6D;
+    color:white;
+    padding:10px 20px;
+    border-radius: 20px;
+    font-family:'Poppins';
+    font-weight:500;
+    cursor:pointer;
+}
+.details button .fas{
+    padding-left:10px;
+}
+.hero-section img{
+    width:600px;
+}
+
+/* brand-section */
+.brand-section{
+    display:flex;
+    justify-content: center;
+    margin:100px 0;
+}
+.brands{
+    width:1000px;
+    display:flex;
+    justify-content: space-around;
+    padding:20px 0;
+    border-top:2px solid #dfdfdf;
+    border-bottom:2px solid #dfdfdf;
+}
+
+/* card-section */
+
+.card-section{
+    display:grid;
+    grid-template-columns:repeat(3,330px);
+    grid-gap:20px;
+    justify-content:center;
+}
+
+.collection h2{
+    
+    text-align:center;
+    font-family:'Poppins';
+    color:var(--font-color);
+    margin:50px 0;
+    font-size:30px;
+}
+
+.card{
+    padding:15px;
+    background:#fff;
+    border-radius:10px;
+    box-shadow:4px 4px 20px 10px rgba(0,0,0,.1);
+}
+.card img{
+    width:100%;
+}
+.card h3,
+.card p{
+    font-family:'Poppins';
+    color:var(--font-color);
+}
+.c-title{
+    padding:10px 0;
+    font-size: 25px;
+}
+.c-price{
+    padding-bottom:10px;
+}
+.ratings .fas{
+    color:orange;
+    font-size:10px;
+}
+.ratings .fas:nth-child(5){
+    color:#999;
+}
+.ratings p{
+    padding-left:10px;
+    font-size:12px;
+}
+.see-more-btn{
+    text-align: right;
 }
