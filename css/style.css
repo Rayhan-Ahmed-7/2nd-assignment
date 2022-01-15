@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Nosifer&family=Poppins:wght@300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mochiy+Pop+P+One&family=Poppins:wght@300;400;500&display=swap');
 
 /* global style */
 :root{
@@ -33,6 +33,12 @@ header{
     justify-content:center;
     height: 100px;
 }
+.menu{
+    display:none;
+}
+.nav-section .menu i{
+    font-size: 25px;
+}
 
 .nav-section{
     width:90%;
@@ -41,7 +47,7 @@ header{
     justify-content: space-between;
 }
 .logo h2{
-    font-family:'Nosifer';
+    font-family: 'Mochiy Pop P One', sans-serif;
     background:linear-gradient(to left, rgb(255, 38, 146) , rgb(255, 31, 61));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -57,6 +63,11 @@ header{
     font-family:'Poppins',sans-serif;
     padding:10px 0;
     color:var(--font-color);
+}
+
+.cart a i{
+    color:var(--font-color);
+    font-size: 25px;
 }
 
 .flexible{
@@ -137,13 +148,9 @@ main{
         opacity: 1;
     }
 }
-.hero-section .img{
-    position: relative;
-    top:0;
-    left: 0;
-}
+
 .hero-section img{
-    position:absolute;
+    position:relative;
     top:0;
     left: 0;
     width:600px;
@@ -165,18 +172,21 @@ main{
 .brand-section{
     display:flex;
     justify-content: center;
-    margin:100px 0;
+    margin:80px 0;
 }
 .brands{
     width:1000px;
     display:flex;
     justify-content: space-around;
+    flex-wrap:wrap;
     padding:20px 0;
     border-top:2px solid #dfdfdf;
     border-bottom:2px solid #dfdfdf;
 }
 .brands img{
     cursor:pointer;
+    padding:10px 15px;
+    width:120px;
 }
 
 /* card-section */
@@ -280,6 +290,81 @@ main{
     font-size:18px;
 }
 
+@media (min-width:721px) and (max-width:900px){
+    .menu{
+        display: block;
+    }
+    .nav-section{
+        justify-content: space-between;
+    }
+    .logo h2{
+        font-size:20px;
+    }
+    .nav-section nav{
+        display:none;
+    }
+    .nav-section .cart{
+        display: block;
+        
+    }
+    .hero-section{
+        flex-direction: column;
+    }
+    .hero-section .details{
+        order: 2;
+        padding:10px 0;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .hero-section img{
+        width:400px;
+    }
+    /* card-section */
+    .card-section{
+        grid-template-columns: repeat(2,330px);
+    }
+}
 @media (max-width:720px){
-    
+    .nav-section{
+        justify-content: space-between;
+    }
+    .menu{
+        display:block;
+    }
+    .logo h2{
+        font-size:20px;
+    }
+    .nav-section nav{
+        display:none;
+    }
+    .hero-section{
+        flex-direction: column;
+    }
+    .hero-section .details{
+        order: 2;
+        padding:10px 0;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .details h2{
+        font-size:25px;
+    }
+    .details p{
+        font-size: 14px;
+    }
+    .hero-section img{
+        width:300px;
+    }
+    /* brand-section */
+    .brands img{
+        width:100px;
+    }
+    /* card-section */
+    .card-section{
+        grid-template-columns: repeat(1,330px);
+    }
 }
